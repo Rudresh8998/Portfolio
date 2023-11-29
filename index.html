@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7eb85ccf03.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about" target="_blank">About Me</a></li>
+                    <li><a href="#services" target="_blank">Projects</a></li>
+                    <li><a href="#resume" target="_blank">Resume</a></li>
+                    <li><a href="#contact" target="_blank">Contact</a></li>
+                    <!--<i class="fa-solid fa-square-xmark"></i>------>
+                </ul>
+                <!--<i class="fa-solid fa-bars"></i>-->
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hey Folks , I am Rudresh ! <br> An EnTC Engineer with keen interest in Web Development</h1>
+            </div>
+        </div>
+    </div>
+    <!--==========================ABOUT===================-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm an EnTC Engineer with good problem solving and Web development skills,
+                        looking for opportunities to join a company that will help me enhance my skills,
+                        strengthen my knowledge and realize my potential.
+                    </p>
+                    <br>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+
+                        <ul>
+                            <li><span>JavaScript</span><br> </li>
+                            <li><span>SQL</span> </li>
+                            <li><span>NodeJs</span> </li>
+                            
+                        </ul>
+                        
+                    </div>
+
+                    <div class="tab-contents" id="education">
+
+                        <ul>
+                            <li><span>BE [EnTC] (2019-2023)</span><br> </li>
+                            <li><span>HSC (2017-2019)</span> </li>
+                            <li><span>SSC (2017)</span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Projects---------------->
+
+
+
+    <div id="services">
+
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+
+            <div class="services-list">
+                <div>
+
+                    <h2> Water Management System</h2>
+                    <p>The Main Aim of the Project is to save
+                        the water for future Generations by
+                        implementing the Smart Water
+                        Management System which will make
+                        people habitual to use the limited amount
+                        of water and reduce Wastage . <br>
+                        <bold> <span>Winner Of SIH 2022</span></bold>
+                    </p>
+                    <a href="#"></a>
+                </div>
+
+
+                <div>
+
+                    <h2> Restaurant Bill Management</h2>
+                    <p>Takes an order from the user and
+                        calculates the bill of User on Admin pages
+                        and ids are created.
+                        - Technologies used are HTML, CSS ,
+                        JavaScript.
+                    </p>
+                    <a href="#"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!------------------Resume------------------------>
+    <div id="resume">
+        <div class="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Resume</h1>
+                <div class="work-list">
+                    <button class="buttons" onclick="window.open('Resume.pdf' , '_blank')">
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------CONTACT-->
+
+    <div id="contact">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #51371f;"></i>rudresh.shrirao3040@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7447612926</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rudresh-shrirao/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="buttons">Submit</button>
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--JAVASCRIPT---------------------------------------------------------------------->
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxnm6QbYY-pwphsCsvyXEJCmczBRlWzkGMkfMxPToWCe-XdZxUgexn3SLAN813QakHE/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
